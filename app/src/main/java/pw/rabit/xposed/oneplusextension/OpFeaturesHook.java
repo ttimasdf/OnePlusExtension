@@ -44,9 +44,10 @@ public class OpFeaturesHook implements IXposedHookLoadPackage {
     };
 
     private static final List<String> packages = Arrays.asList(
-            "com.android.mms",
-            "com.android.dialer",
-            "com.android.incallui"
+            "com.android.mms",          // SMS content recognition, blacklist
+            "com.oneplus.security",     // Traffic auto calibration, SMS smart block
+            "com.android.dialer",       // Settings related to call recording
+            "com.android.incallui"      // Call recording
     );
 
     public void handleLoadPackage(final XC_LoadPackage.LoadPackageParam lpparam) throws Throwable {

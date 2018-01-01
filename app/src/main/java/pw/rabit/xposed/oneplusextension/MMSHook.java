@@ -9,6 +9,8 @@ import de.robv.android.xposed.callbacks.XC_LoadPackage;
 
 /**
  * Created by tim on 2017/12/20.
+ *
+ * WARNING: This file is only archived for reference. It will NOT be loaded by xposed.
  */
 
 public class MMSHook implements IXposedHookLoadPackage {
