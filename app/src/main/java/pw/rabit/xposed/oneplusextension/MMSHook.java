@@ -34,5 +34,25 @@ public class MMSHook implements IXposedHookLoadPackage {
                         return null;
                     }
                 });
+
+        // Another workaround for Oneplus 5/5T Oreo OPSms ver 1.2 (reported from #1)
+        try {
+            XposedHelpers.findAndHookMethod("com.oneplus.lib.util.ReflectUtil", lpparam.classLoader,
+                    "isFeatureSupported", String.class,
+                    new XC_MethodHook() {
+                        @Override
+                        protected void beforeHookedMethod(MethodHookParam param) throws Throwable {
+                            String featureName = (String) param.args[0];
+                            if(featureName.equals("OP_FEATURE_SKU_CHINA"))
+                                param.setResult(true);
+                            else if(featureName.equals("OP_FEATURE_SKU_GLOBAL"))
+                                param.setResult(false);
+                        }
+                    });
+            XposedBridge.log("Found com.oneplus.lib.util.ReflectUtil");
+        } catch (XposedHelpers.ClassNotFoundError e) {
+            XposedBridge.log("NOT Found com.oneplus.lib.util.ReflectUtil");
+        }
+
     }
 }
