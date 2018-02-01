@@ -9,7 +9,8 @@
 - 陌生号码识别
 - 流量校正
 
-请在最下面的链接中下载 liuliangbao.apk 与 YuloreFramework.apk （皆从氢OS中提取），否则流量校正与来电识别将不能正常工作。
+~~请在最下面的链接中下载 liuliangbao.apk 与 YuloreFramework.apk （皆从氢OS中提取）~~，否则流量校正与来电识别将不能正常工作。
+根据 [#2](https://github.com/ttimasdf/OnePlusExtension/issues/2) 反馈7.x提取的apk不可安装，哪位好心人从氢OS 8.x系统 `/system/app` 里提取一下这两个库？
 
 # English version
 
