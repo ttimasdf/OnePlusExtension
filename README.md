@@ -11,6 +11,8 @@
 
 请在最下面的链接中下载 liuliangbao.apk 与 YuloreFramework.apk （皆从氢OS中提取），否则流量校正与来电识别将不能正常工作。
 
+YuloreFramework.apk 原版因应用签名问题无法正确安装，因此使用 [uber-apk-signer](//github.com/patrickfav/uber-apk-signer) 进行了重签。提取的原版 apk 位于 [auxiliary](/auxiliary) 目录中，感谢 [@zhongfly](//github.com/zhongfly) 提供的最新版。
+
 # English version
 
 Add H2OS(HydrogenOS) features to OxygenOS for OnePlus series, such as SMS recognition (for Chinese users), and call recording.
